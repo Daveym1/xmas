@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Wishlist</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul class="navbar">
+					<li><a href="#" onclick="showList('laura')">Laura</a></li>
+					<li><a href="#" onclick="showList('james')">James</a></li>
+					<li><a href="#" onclick="showList('eva')">Eva</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<h1>Wishlist</h1>
+
+		<div id="wishlist-container">
+			<!-- Laura's list -->
+			<ul id="laura" class="wishlist active">
+				<li><input type="checkbox" /> The Game of Life</li>
+				<li><input type="checkbox" /> Battleship Board Game</li>
+				<li><input type="checkbox" /> Art Lab Watercolor Studio</li>
+				<li><input type="checkbox" /> Grand Illusions 200+ Magic Trick Set</li>
+				<li><input type="checkbox" /> Herd Mentality Game</li>
+				<li><input type="checkbox" /> Flowers in Watering Can Lego Set</li>
+				<li><input type="checkbox" /> 5000 Facts About Animals</li>
+				<li><input type="checkbox" /> Tamagotchi Starry Showers</li>
+				<li><input type="checkbox" /> Cool Making Pottery Studio</li>
+				<li><input type="checkbox" /> Animal Encyclopedia</li>
+				<li><input type="checkbox" /> Adopt Me! Mystery Pets</li>
+				<li><input type="checkbox" /> What Do You See About the Moon?</li>
+				<li><input type="checkbox" /> Sticky Rolls</li>
+				<li><input type="checkbox" /> Push Pop Quick Game</li>
+				<li><input type="checkbox" /> Chase Light Game</li>
+				<li><input type="checkbox" /> Mini Brands Book x2+</li>
+				<li><input type="checkbox" /> Universe Crystal</li>
+				<li><input type="checkbox" /> Hungry Turtles</li>
+				<li><input type="checkbox" /> Lotus Flower Set Lego</li>
+				<li><input type="checkbox" /> Rose Lego Set</li>
+				<li><input type="checkbox" /> Pick 'n' Hop</li>
+				<li><input type="checkbox" /> Classic Games Collection Log Games</li>
+				<li><input type="checkbox" /> Panda Teddy</li>
+				<li><input type="checkbox" /> Pokemon Cards</li>
+				<li><input type="checkbox" /> Slime</li>
+				<li><input type="checkbox" /> Lego Harry Potter</li>
+			</ul>
+
+			<!-- James's list -->
+			<ul id="james" class="wishlist">
+				<li><input type="checkbox" /> UNO Reverse Card</li>
+				<li><input type="checkbox" /> Stunt Scooter</li>
+				<li><input type="checkbox" /> Stuff</li>
+			</ul>
+
+			<!-- Eva's list -->
+			<ul id="eva" class="wishlist">
+				<li><input type="checkbox" /> Ice Cream Shop Set</li>
+				<li><input type="checkbox" /> Living Nature</li>
+				<li><input type="checkbox" /> Air Dry Clay</li>
+				<li><input type="checkbox" /> Slime</li>
+				<li><input type="checkbox" /> Red Earrings</li>
+				<li><input type="checkbox" /> Aqua Beads</li>
+				<li><input type="checkbox" /> Stitch Lego and Stickers</li>
+				<li><input type="checkbox" /> Kuromi Figurine</li>
+				<li><input type="checkbox" /> Unicorn Lego Set</li>
+				<li><input type="checkbox" /> Disney Moana Lego Set</li>
+				<li><input type="checkbox" /> Art Supplies</li>
+				<li><input type="checkbox" /> Artist Stuff</li>
+			</ul>
+		</div>
+
+		<script>
+			function showList(listId) {
+				// Hide all lists
+				const lists = document.querySelectorAll('.wishlist');
+				lists.forEach((list) => list.classList.remove('active'));
+
+				// Show the selected list
+				const selectedList = document.getElementById(listId);
+				selectedList.classList.add('active');
+			}
+		</script>
+	</body>
+</html>
